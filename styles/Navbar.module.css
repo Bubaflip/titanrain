@@ -1,0 +1,25 @@
+.nav{
+    height: 50px;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #161616;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+    position: sticky; 
+    /* width: 100vw; */
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 3px 10px #000000;
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    gap:0.4rem;
+    max-width: 1400px;
+}

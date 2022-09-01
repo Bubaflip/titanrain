@@ -1,9 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import '../styles/globals.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Popup from '../components/Popup';
 import { Howl } from 'howler';
+import Navbar from '../components/Navbar.js'
 
 function MyApp({ Component, pageProps }) {
   const [entered, setEntered] = useState(false)
@@ -30,22 +31,44 @@ function MyApp({ Component, pageProps }) {
     newSound.play()
   }
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect (()=>{
+    setLoading(true);
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute(
+      "src",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    );
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return()=>{
+      if(threeScript){
+        threeScript.remove();
+      }
+    }
+  },[]);
+
+  useEffect (()=>{
+    setLoading(true);
+  }, []);
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
       </Head>
+      <Navbar />
       <div>
         {
-          entered ? <Component {...pageProps} /> : null
+          entered ? <Component {...pageProps} /> : <></>
         }
         <Popup show={!entered}>
           <div className='wrapper'>
             <div>
                 <img
                   className='enterImage'
-                  src='./enterImage.jpeg'
+                  src='./WhiteCircle.png'
                   onClick={clickEnterWithSound}
                   // le cana
                 />
