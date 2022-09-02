@@ -9,7 +9,9 @@ const Navbar = () => {
             <Image src={circle} height={20} width={20}/>
             <Image src={circle} height={20} width={20}/>
             <Image src={circle} height={20} width={20}/>
+            
             </div>
+            <h3>titan rain</h3>
         </div>
     </>
     )

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Popup from '../components/Popup';
 import { Howl } from 'howler';
 import Navbar from '../components/Navbar.js'
+import styles from '../styles/Home.module.css'
 
 function MyApp({ Component, pageProps }) {
   const [entered, setEntered] = useState(false)
@@ -18,7 +19,7 @@ function MyApp({ Component, pageProps }) {
 
   const getAudioClip = (id) => {
     if (id == 0) {
-      return '/Stone.mp3';
+      return '/yo.mp3';
     }
   }
 
@@ -55,9 +56,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-      </Head>
+      </Head> */}
       <Navbar />
       <div>
         {
@@ -65,9 +66,8 @@ function MyApp({ Component, pageProps }) {
         }
         <Popup show={!entered}>
           <div className='wrapper'>
-            <div>
+            <div className={styles.enterImage}>
                 <img
-                  className='enterImage'
                   src='./WhiteCircle.png'
                   onClick={clickEnterWithSound}
                   // le cana
