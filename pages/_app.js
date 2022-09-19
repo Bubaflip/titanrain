@@ -6,6 +6,7 @@ import Popup from '../components/Popup';
 import { Howl } from 'howler';
 import Navbar from '../components/Navbar.js'
 import styles from '../styles/Home.module.css'
+import trlogo from '../public/tranim.webm'
 
 function MyApp({ Component, pageProps }) {
   const [entered, setEntered] = useState(false)
@@ -34,7 +35,7 @@ function MyApp({ Component, pageProps }) {
 
   const [loading, setLoading] = useState(false);
 
-  useEffect (()=>{
+  useEffect(() => {
     setLoading(true);
     const threeScript = document.createElement("script");
     threeScript.setAttribute("id", "threeScript");
@@ -43,14 +44,14 @@ function MyApp({ Component, pageProps }) {
       "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
     );
     document.getElementsByTagName("head")[0].appendChild(threeScript);
-    return()=>{
-      if(threeScript){
+    return () => {
+      if (threeScript) {
         threeScript.remove();
       }
     }
-  },[]);
+  }, []);
 
-  useEffect (()=>{
+  useEffect(() => {
     setLoading(true);
   }, []);
 
@@ -67,11 +68,14 @@ function MyApp({ Component, pageProps }) {
         <Popup show={!entered}>
           <div className='wrapper'>
             <div className={styles.enterImage}>
-                <img
-                  src='./WhiteCircle.png'
-                  onClick={clickEnterWithSound}
-                  // le cana
-                />
+              {/* <img
+                src='./tr4_2_small.png'
+                onClick={clickEnterWithSound}
+                width={150}// le cana
+              /> */}
+              <video className={styles.mainVideo} onClick={clickEnterWithSound} autoPlay muted loop controls=''>
+                <source src={trlogo} type="video/webm" />
+              </video>
             </div>
             <div></div>
           </div>

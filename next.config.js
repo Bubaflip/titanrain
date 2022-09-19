@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
+  images: {
+    domains: ["res.cloudinary.com", "ipfs.infura.io"]
+  },
   
   webpack(config, options) {
     config.module.rules.push({
@@ -19,5 +21,6 @@ const nextConfig = {
   }
 }
 
+const withVideos = require('next-videos')
  
-module.exports = nextConfig
+module.exports = withVideos(nextConfig)

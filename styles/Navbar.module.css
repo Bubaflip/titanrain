@@ -1,5 +1,5 @@
 .nav{
-    height: 50px;
+    height: 75px;
     padding: 10px;
     padding-left: 100px;
     padding-right: 100px;
@@ -24,3 +24,15 @@
     gap:0.4rem;
     max-width: 1400px;
 }
+
+.logoCard{
+    height:50px;
+    width:35px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+
+

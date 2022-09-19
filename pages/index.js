@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import trlogo from '../public/tr_test.gif'
+import trlogo from '../public/tranim.webm'
 import HALO from 'vanta/dist/vanta.net.min.js'
 import circle from '../public/BlackCircle.png'
 import * as THREE from "three"
@@ -37,13 +37,49 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.bg} ref={vantaRef}>
       </div>
-      
 
-      <div className={styles.blackCircle}>
-      <Image src={trlogo} width={200} height={200}></Image>
-      <p>web3 adventures. <br></br>game development.</p>
+      <div className={styles.topSection}>
+        <div className={styles.topText}>
+        
+          <p>web3 adventures. <br></br>game development.</p>
+        </div>
       </div>
-      
+
+      {/* infos 1 */}
+
+      <div className={styles.section}>
+      <div className={styles.subSection}>
+        <h1>What we do1</h1>
+        <p>asdfasdfasdfasdfasdfasdfasdf</p>
+      </div>
+      </div>
+
+      {/* infos 2 */}
+
+      <div className={styles.section}>
+      <div className={styles.subSection}>
+        <h1>What we do2</h1>
+        <p>asdfasdfasdfasdfasdfasdfasdf</p>
+      </div>
+      </div>
+
+      {/* projects */}
+
+      <div className={styles.section}>
+      <div className={styles.subSection}>
+        <h1>Projects</h1>
+        <p>asdfasdfasdfasdfasdfasdfasdf</p>
+      </div>
+      </div>
+
+      {/* contact */}
+
+      <div className={styles.section}>
+      <div className={styles.subSection}>
+        <h1>Contact</h1>
+        <p>asdfasdfasdfasdfasdfasdfasdf</p>
+      </div>
+      </div>
 
     </div>
   )
