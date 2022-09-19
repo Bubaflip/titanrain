@@ -22,7 +22,7 @@ export default function Home() {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x3f82ff,
+          color: 0x3f6cff,
           backgroundColor: 0x0
         })
       )
