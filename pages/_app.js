@@ -6,7 +6,7 @@ import Popup from '../components/Popup';
 import { Howl } from 'howler';
 import Navbar from '../components/Navbar.js'
 import styles from '../styles/Home.module.css'
-import trlogo from '../public/tranim.webm'
+import trlogo from '../public/tranim2.webm'
 
 function MyApp({ Component, pageProps }) {
   const [entered, setEntered] = useState(false)
