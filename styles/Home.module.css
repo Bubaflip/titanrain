@@ -61,7 +61,7 @@
 
 .section{
   background-color: rgb(0, 0, 0);
-  height: 300px;
+  height: fit-content;
   width: 100%;
   z-index: 0;
   padding:2rem;
@@ -69,15 +69,37 @@
   flex-direction: column;
   justify-content: center;
  align-items: center; 
+ /* border:2px yellow solid; */
 }
 
 .subSection{
-background-color: #161616;
-border-radius: 15px;
+/* background-color: #161616; */
 padding:2rem;
   width: 100%;
-  max-width: 1500px;
+  
+  max-width: 1000px;
+  /* border: 2px purple solid; */
+  height: auto;
 }
+
+.subSectionCelmates{
+  /* background-color: #161616; */
+  padding:2rem;
+    width: 100%;
+    max-width: 1500px;
+    /* border: 2px purple solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(214,209,198,1) 8%, rgba(214,209,198,1) 91%, rgba(0,0,0,1) 100%);
+    /* position: absolute; */
+    height: auto;
+  }
+
+  .bigImage{
+    position:relative;
+
+  }
 
 .trLogo{
     width: 100px;
@@ -89,11 +111,13 @@ padding:2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: stretch;
+  /* border: 2px red solid; */
 }
 
 .projectCard{
   border-radius: 15px;
-  background-color: white;
+  /* background-color: #d6d1c6; */
   display: flex;
   flex-direction: column;
   justify-content: center;

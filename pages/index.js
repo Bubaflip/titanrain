@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import trlogo from '../public/tranim.webm'
+import celogo from '../public/celmates_logo.gif'
 import HALO from 'vanta/dist/vanta.net.min.js'
 import celmateImg from '../public/tr4_2_small.png'
 import * as THREE from "three"
@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.topSection}>
           <div className={styles.topText}>
 
-            <p>web3 adventures. <br></br>game development.</p>
+            <h1>Building tomorrow's internet<br></br>One dream at a time.</h1>
           </div>
         </div>
 
@@ -48,8 +48,12 @@ export default function Home() {
 
         <div className={styles.section}>
           <div className={styles.subSection}>
-            <h1>Pushing the boundaries of web3</h1>
-            <p>asdfasdfasdfasdfasdfasdfasdf</p>
+            <h1>Adventurers of the Cyber-Space</h1>
+            <h3>We are a digital content studio specialising in Game Development and Blockchain. 
+              <br></br>
+              Our tech stack extends from Unity to front-end to Smart-Contracts development and deployment.
+              <br></br>
+              We wrap images, sound and logic into meaningful adventures. </h3>
           </div>
         </div>
 
@@ -58,14 +62,16 @@ export default function Home() {
         <div className={styles.section}>
           <div className={styles.subSection}>
             <h1>Hypergamification</h1>
-            <p>asdfasdfasdfasdfasdfasdfasdf</p>
+            <h3>Games are everything. Our extensive knowledge of game loops and user experience allows us to craft
+              unique experiences driving fun and engagement.
+            </h3>
           </div>
         </div>
 
         {/* projects */}
 
         <div className={styles.section}>
-          <div className={styles.subSection}>
+          <div className={styles.subSectionCelmates}>
             <h1>Projects</h1>
             <div className={styles.projectCardContainer}>
 
@@ -73,8 +79,8 @@ export default function Home() {
                 <div className={styles.projectCardText}>
                   <h2>Celmates</h2>
                 </div>
-                <div className={styles.projectCardImage}>
-                  <Image src={celmateImg} height={200} width={200}></Image>
+                <div className={styles.bigImage}>
+                  <Image src={celogo} height={400} width={400}></Image>
                 </div>
               </div>
 
@@ -87,7 +93,8 @@ export default function Home() {
         <div className={styles.section}>
           <div className={styles.subSection}>
             <h1>Contact</h1>
-            <p>asdfasdfasdfasdfasdfasdfasdf</p>
+            <p>martin.m@titanrain.xyz</p>
+            <p>martin.b@titanrain.xyz</p>
           </div>
         </div>
     </div>
