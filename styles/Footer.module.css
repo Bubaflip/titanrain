@@ -1,5 +1,5 @@
 .footer {
-    height: 75px;
+    height: 145px;
     /* padding: 5%; */
     padding: 0 2.5%;
     background: #0f0f0f;
@@ -13,6 +13,7 @@
     box-shadow: 0 3px 5px #00000074;
     left: 0;
     right: 0;
+    
 }
 
 
@@ -20,6 +21,12 @@
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     font-size: clamp(0.8rem, 0.7838rem + 0.0865vw, 1rem);
+    font-family: 'Exo 2', sans-serif;
+}
+
+.videoFooter {
+    height: 80px;
 }

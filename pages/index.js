@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import celogo from '../public/logo_animated.gif'
+import trlogo from '../public/tranim2.webm'
 import HALO from 'vanta/dist/vanta.net.min.js'
 import * as THREE from "three"
 import { useState, useRef, useEffect } from 'react'
+import { global } from 'styled-jsx/css'
 
 export default function Home() {
 
@@ -86,6 +87,9 @@ export default function Home() {
             <span className={styles.titleSpans}>{text[1]}</span>
           </h1>
         </div>
+        {/* <video className={styles.videoInside} autoPlay muted loop controls=''>
+          <source src={trlogo} type="video/webm" />
+        </video> */}
       </div>
 
       {/* infos 1 */}
