@@ -1,38 +1,31 @@
-.nav{
+.nav {
     height: 75px;
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    background: #161616;
+    padding: 0 2.5%;
+    background: #0f0f0f;
     color: #fff;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    justify-content: center;
-    position: sticky; 
-    /* width: 100vw; */
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     box-shadow: 0 3px 5px #00000074;
     font-style: italic;
 }
 
-.container{
+
+.container {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-start;
-    gap:0.4rem;
-    max-width: 1400px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-.logoCard{
-    height:50px;
-    width:35px;
+.logoCard {
+    height: 100px;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
 }
-
-
-
-

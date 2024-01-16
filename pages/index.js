@@ -74,22 +74,23 @@ export default function Home() {
   }, []);
 
 
-return (
-  <div className={styles.container}>
-    <div className={styles.bg} ref={vantaRef}>
-    </div>
-    <div className={styles.topSection}>
-      <div className={styles.topText}>
-        <h1>
-          {text[0]}<br></br>{text[1]}
-        </h1>
-        {/* <h1>Building tomorrow's internet.<br></br>One dream at a time.</h1> */}
+  return (
+    <div className={styles.container}>
+      <div className={styles.bg} ref={vantaRef}>
       </div>
-    </div>
+      <div className={styles.topSection}>
+        <div className={styles.topText}>
+          <h1 className={styles.titleText}>
+            <span className={styles.titleSpans}>{text[0]}</span>
+            <br />
+            <span className={styles.titleSpans}>{text[1]}</span>
+          </h1>
+        </div>
+      </div>
 
-    {/* infos 1 */}
+      {/* infos 1 */}
 
-    {/* <div className={styles.section}>
+      {/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Adventurers of the Cyber-Space</h1>
           <p>We are a digital content studio specialising in Game Development and Blockchain.
@@ -100,9 +101,9 @@ return (
         </div>
       </div> */}
 
-    {/* infos 2 */}
+      {/* infos 2 */}
 
-    {/* <div className={styles.section}>
+      {/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Hypergamification</h1>
           <p>Games are everything. Our extensive knowledge of game loops and user experience allows us to craft
@@ -111,9 +112,9 @@ return (
         </div>
       </div> */}
 
-    {/* projects */}
+      {/* projects */}
 
-    {/* <div className={styles.section}>
+      {/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Works</h1>
           <div className={styles.projectCard}>
@@ -126,7 +127,7 @@ return (
           </div>
         </div>
       </div> */}
-    {/* <div className={styles.projectCard}>
+      {/* <div className={styles.projectCard}>
               <div className={styles.projectCardText}>
                 <h2>Mojo</h2>
               </div>
@@ -135,15 +136,13 @@ return (
               </div>
             </div> */}
 
-    {/* contact */}
-
-    <div className={styles.section}>
-      <div className={styles.subSection}>
-        {/* <h1>Contact</h1> */}
-        <p>martin.m@titanrain.xyz</p>
-        <p>martin.b@titanrain.xyz</p>
-      </div>
+      {/* contact */}
+      {/* <div className={styles.section}>
+        <div className={styles.subSection}>
+          <p>martin.m@titanrain.xyz</p>
+          <p>martin.b@titanrain.xyz</p>
+        </div>
+      </div> */}
     </div>
-  </div>
-)
+  )
 }

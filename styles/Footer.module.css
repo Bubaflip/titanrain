@@ -1,0 +1,25 @@
+.footer {
+    height: 75px;
+    /* padding: 5%; */
+    padding: 0 2.5%;
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 3px 5px #00000074;
+    left: 0;
+    right: 0;
+}
+
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: clamp(0.8rem, 0.7838rem + 0.0865vw, 1rem);
+}

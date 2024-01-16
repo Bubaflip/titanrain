@@ -7,13 +7,10 @@ const Navbar = () => {
         <div className={styles.nav}>
             <div className={styles.container}>
                 <div className={styles.logoCard}>
-                    <Image src={circle} height={50} width={35}/>
-
+                    <Image src={circle} height={50} width={35} />
                 </div>
-
-            
+                <h3>titan rain</h3>
             </div>
-            <h3>titan rain</h3>
         </div>
     </>
     )
