@@ -37,17 +37,17 @@
 .videoInside {
   position: absolute;
 
-  /* right: -50%;
+  right: -50%;
   bottom: -20%;
-  height: 850px; */
+  height: 850px;
 
   width: 100%;
-  z-index: 0;
+  /* z-index: 0;
   transform: rotate(45deg);
-  overflow: hidden;
+  overflow: hidden; */
 }
 
-/* @media (max-width: 2000px) {
+@media (max-width: 2000px) {
   .videoInside {
     right: -50%;
     bottom: -10%;
@@ -61,7 +61,7 @@
     bottom: -5%;
     height: 500px;
   }
-} */
+}
 
 .topSection {
   display: flex;
@@ -91,8 +91,9 @@
   color: #e4e4e4;
   font-weight: 100;
   user-select: none;
+  font-family: 'Exo 2', sans-serif;
   /* font-family: 'FrontFont', sans-serif; */
-  font-family: 'Lined', sans-serif;
+  /* font-family: 'Lined', sans-serif; */
 }
 
 .titleSpans {
