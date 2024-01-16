@@ -11,7 +11,7 @@ const Navbar = () => {
                 {/* <video className={styles.videoFooter} autoPlay muted loop controls=''>
                     <source src={trlogo} type="video/webm" />
                 </video> */}
-                <Image src={circle} height={106} width={67.33} />
+                {/* <Image src={circle} height={106} width={67.33} /> */}
                 <p>martin.b@titanrain.xyz</p>
             </div>
         </div>
