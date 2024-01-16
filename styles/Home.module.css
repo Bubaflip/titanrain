@@ -36,21 +36,22 @@
 
 .videoInside {
   position: absolute;
-  right: -50%;
+
+  /* right: -50%;
   bottom: -20%;
-  height: 850px;
+  height: 850px; */
+
   width: 100%;
   z-index: 0;
   transform: rotate(45deg);
   overflow: hidden;
 }
 
-@media (max-width: 2000px) {
+/* @media (max-width: 2000px) {
   .videoInside {
     right: -50%;
     bottom: -10%;
     height: 600px;
-    /* Adjust height for smaller screens */
   }
 }
 
@@ -59,9 +60,8 @@
     right: -50%;
     bottom: -5%;
     height: 500px;
-    /* Adjust height for smaller screens */
   }
-}
+} */
 
 .topSection {
   display: flex;
