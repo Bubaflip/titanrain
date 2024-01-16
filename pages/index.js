@@ -80,6 +80,9 @@ export default function Home() {
       <div className={styles.bg} ref={vantaRef}>
       </div>
       <div className={styles.topSection}>
+        <video className={styles.videoInside} autoPlay muted loop controls=''>
+          <source src={trlogo} type="video/webm" />
+        </video>
         <div className={styles.topText}>
           <h1 className={styles.titleText}>
             <span className={styles.titleSpans}>{text[0]}</span>
@@ -87,14 +90,21 @@ export default function Home() {
             <span className={styles.titleSpans}>{text[1]}</span>
           </h1>
         </div>
-        {/* <video className={styles.videoInside} autoPlay muted loop controls=''>
-          <source src={trlogo} type="video/webm" />
-        </video> */}
+
       </div>
+    </div>
+  )
+}
 
-      {/* infos 1 */}
 
-      {/* <div className={styles.section}>
+
+
+
+
+
+
+{/* infos 1 */ }
+{/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Adventurers of the Cyber-Space</h1>
           <p>We are a digital content studio specialising in Game Development and Blockchain.
@@ -105,9 +115,9 @@ export default function Home() {
         </div>
       </div> */}
 
-      {/* infos 2 */}
+{/* infos 2 */ }
 
-      {/* <div className={styles.section}>
+{/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Hypergamification</h1>
           <p>Games are everything. Our extensive knowledge of game loops and user experience allows us to craft
@@ -116,9 +126,9 @@ export default function Home() {
         </div>
       </div> */}
 
-      {/* projects */}
+{/* projects */ }
 
-      {/* <div className={styles.section}>
+{/* <div className={styles.section}>
         <div className={styles.subSection}>
           <h1 className={styles.sectionTitles}>Works</h1>
           <div className={styles.projectCard}>
@@ -131,7 +141,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      {/* <div className={styles.projectCard}>
+{/* <div className={styles.projectCard}>
               <div className={styles.projectCardText}>
                 <h2>Mojo</h2>
               </div>
@@ -140,13 +150,10 @@ export default function Home() {
               </div>
             </div> */}
 
-      {/* contact */}
-      {/* <div className={styles.section}>
+{/* contact */ }
+{/* <div className={styles.section}>
         <div className={styles.subSection}>
           <p>martin.m@titanrain.xyz</p>
           <p>martin.b@titanrain.xyz</p>
         </div>
       </div> */}
-    </div>
-  )
-}
