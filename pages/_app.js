@@ -1,7 +1,7 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import '../styles/globals.css'
-import { useState, useEffect } from 'react';
 import Popup from '../components/Popup';
 import { Howl } from 'howler';
 import Navbar from '../components/Navbar.js'
@@ -10,20 +10,25 @@ import styles from '../styles/Home.module.css'
 import trlogo from '../public/tranim2.webm'
 
 function MyApp({ Component, pageProps }) {
-  const [entered, setEntered] = useState(false)
-  const [soundOn, setSoundOn] = useState(false)
+  const [entered, setEntered] = useState(false);
+  const [soundOn, setSoundOn] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
+
+  const onVideoError = () => {
+    setIsVideoLoaded(false);
+  };
 
   const clickEnterWithSound = () => {
     setSoundOn(true)
     playMusic(0, false)
     setEntered(true)
-  }
+  };
 
   const getAudioClip = (id) => {
     if (id == 0) {
       return '/yo.mp3';
     }
-  }
+  };
 
   const playMusic = (srcId, loopSound) => {
     let newSound = new Howl({
@@ -32,7 +37,7 @@ function MyApp({ Component, pageProps }) {
       loop: loopSound,
     })
     newSound.play()
-  }
+  };
 
   const [loading, setLoading] = useState(false);
 
@@ -70,14 +75,29 @@ function MyApp({ Component, pageProps }) {
         <Popup show={!entered}>
           <div className='wrapper'>
             <div className={styles.enterImage}>
-              {/* <img
-                src='./tr4_2_small.png'
-                onClick={clickEnterWithSound}
-                width={150}// le cana
-              /> */}
-              <video className={styles.mainVideo} onClick={clickEnterWithSound} autoPlay muted loop controls=''>
+              {isVideoLoaded ? (
+                <video
+                  className={styles.mainVideo}
+                  onClick={clickEnterWithSound}
+                  autoPlay
+                  muted
+                  loop
+                  controls=''
+                  onError={onVideoError}
+                >
+                  <source src={trlogo} type="video/webm" />
+                </video>
+              ) : (
+                <img
+                  src='./tr4_2_small.png'
+                  onClick={clickEnterWithSound}
+                  width={150}
+                  alt='Fallback Image'
+                />
+              )}
+              {/* <video className={styles.mainVideo} onClick={clickEnterWithSound} autoPlay muted loop controls=''>
                 <source src={trlogo} type="video/webm" />
-              </video>
+              </video> */}
             </div>
             <div></div>
           </div>

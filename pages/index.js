@@ -80,9 +80,9 @@ export default function Home() {
       <div className={styles.bg} ref={vantaRef}>
       </div>
       <div className={styles.topSection}>
-        <video className={styles.videoInside} autoPlay muted loop controls=''>
+        {/* <video className={styles.videoInside} autoPlay muted loop controls=''>
           <source src={trlogo} type="video/webm" />
-        </video>
+        </video> */}
         <div className={styles.topText}>
           <h1 className={styles.titleText}>
             <span className={styles.titleSpans}>{text[0]}</span>
