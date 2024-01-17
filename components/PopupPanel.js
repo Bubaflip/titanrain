@@ -26,6 +26,12 @@ const PopupPanel = ({ show, onClose }) => {
     }
     return (
         <div className={styles.popupPanel} ref={ref}>
+            <button
+                className={styles.closeButton}
+                onClick={onClose}
+            >
+                X
+            </button>
             <div className={styles.infoText}>
                 <h2>Who are we?</h2>
                 <p>We are a digital content studio specialising in Game Development and Blockchain.
@@ -64,62 +70,3 @@ const PopupPanel = ({ show, onClose }) => {
 };
 
 export default PopupPanel;
-
-
-
-{/* infos 1 */ }
-{/* <div className={styles.section}>
-        <div className={styles.subSection}>
-          <h1 className={styles.sectionTitles}>Adventurers of the Cyber-Space</h1>
-          <p>We are a digital content studio specialising in Game Development and Blockchain.
-            <br></br>
-            Our tech stack extends from Unity to front-end to Smart-Contracts development and deployment.
-            <br></br>
-            We wrap images, sound and logic into meaningful adventures. </p>
-        </div>
-      </div> */}
-
-{/* infos 2 */ }
-
-{/* <div className={styles.section}>
-        <div className={styles.subSection}>
-          <h1 className={styles.sectionTitles}>Hypergamification</h1>
-          <p>Games are everything. Our extensive knowledge of game loops and user experience allows us to craft
-            unique experiences driving fun and engagement.
-          </p>
-        </div>
-      </div> */}
-
-{/* projects */ }
-
-{/* <div className={styles.section}>
-        <div className={styles.subSection}>
-          <h1 className={styles.sectionTitles}>Works</h1>
-          <div className={styles.projectCard}>
-            <div className={styles.projectCardText}>
-              <h2>Cel Mates</h2>
-            </div>
-            <div className={styles.bigImage}>
-              <Image src={celogo} height={300} width={300}></Image>
-            </div>
-          </div>
-        </div>
-      </div> */}
-{/* <div className={styles.projectCard}>
-              <div className={styles.projectCardText}>
-                <h2>Mojo</h2>
-              </div>
-              <div className={styles.bigImage}>
-                <Image src={mojoLogo} height={300} width={300}></Image>
-              </div>
-            </div> */}
-
-{/* contact */ }
-{/* <div className={styles.section}>
-        <div className={styles.subSection}>
-          <p>martin.m@titanrain.xyz</p>
-          <p>martin.b@titanrain.xyz</p>
-        </div>
-      </div> */}
-
-

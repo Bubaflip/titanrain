@@ -9,7 +9,13 @@ const Navbar = () => {
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {
-        setShowPopup(!showPopup);
+        if (!showPopup) {
+            setShowPopup(true);
+        }
+    };
+
+    const closePopup = () => {
+        setShowPopup(false);
     };
 
     return (<>
@@ -30,7 +36,7 @@ const Navbar = () => {
         </div>
         <PopupPanel
             show={showPopup}
-            onClose={togglePopup}
+            onClose={closePopup}
         />
     </>
     )
