@@ -36,15 +36,13 @@
 
 .videoInside {
   position: absolute;
-
   right: -50%;
   bottom: -20%;
   height: 850px;
-
   width: 100%;
-  /* z-index: 0;
+  z-index: 0;
   transform: rotate(45deg);
-  overflow: hidden; */
+  overflow: hidden;
 }
 
 @media (max-width: 2000px) {
@@ -92,6 +90,7 @@
   font-weight: 100;
   user-select: none;
   font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
   /* font-family: 'FrontFont', sans-serif; */
   /* font-family: 'Lined', sans-serif; */
 }
