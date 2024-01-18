@@ -12,7 +12,6 @@ import trlogo from '../public/tranim2.webm'
 function MyApp({ Component, pageProps }) {
   const [entered, setEntered] = useState(false);
   const [soundOn, setSoundOn] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
 
   const onVideoError = () => {
     setIsVideoLoaded(false);
@@ -75,29 +74,23 @@ function MyApp({ Component, pageProps }) {
         <Popup show={!entered}>
           <div className='wrapper'>
             <div className={styles.enterImage}>
-              {isVideoLoaded ? (
-                <video
-                  className={styles.mainVideo}
-                  onClick={clickEnterWithSound}
-                  autoPlay
-                  muted
-                  loop
-                  controls=''
-                  onError={onVideoError}
-                >
-                  <source src={trlogo} type="video/webm" />
-                </video>
-              ) : (
-                <img
-                  src='./tr4_2_small.png'
-                  onClick={clickEnterWithSound}
-                  width={150}
-                  alt='Fallback Image'
-                />
-              )}
-              {/* <video className={styles.mainVideo} onClick={clickEnterWithSound} autoPlay muted loop controls=''>
+              <video
+                className={styles.mainVideo}
+                onClick={clickEnterWithSound}
+                autoPlay
+                muted
+                loop
+                controls=''
+              >
                 <source src={trlogo} type="video/webm" />
-              </video> */}
+              </video>
+
+              <img
+                src='./tr4_2_small.png'
+                onClick={clickEnterWithSound}
+                width={250}
+                alt='TR Logo'
+              />
             </div>
             <div></div>
           </div>

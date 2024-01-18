@@ -5,6 +5,10 @@ import HALO from 'vanta/dist/vanta.net.min.js'
 import * as THREE from "three"
 import { useState, useRef, useEffect } from 'react'
 import { global } from 'styled-jsx/css'
+import { Application } from '@splinetool/runtime';
+import Spline from '@splinetool/react-spline';
+
+
 
 export default function Home() {
 
@@ -17,25 +21,31 @@ export default function Home() {
   const [text, setText] = useState(originalTexts);
 
   // vantaEffect
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        HALO({
-          el: vantaRef.current,
-          THREE,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0x3f82ff,
-          backgroundColor: 0x0
-        })
-      )
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect])
+  // useEffect(() => {
+  //   if (!vantaEffect) {
+  //     setVantaEffect(
+  //       HALO({
+  //         el: vantaRef.current,
+  //         THREE,
+  //         minHeight: 200.00,
+  //         minWidth: 200.00,
+  //         scale: 1.00,
+  //         scaleMobile: 1.00,
+  //         color: 0x3f82ff,
+  //         backgroundColor: 0x0
+  //       })
+  //     )
+  //   }
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, [vantaEffect])
+
+  // useEffect(() => {
+  //   const canvas = document.getElementById('canvas3d');
+  //   const app = new Application(canvas);
+  //   app.load('https://prod.spline.design/v9A-GdS69dqDaCXi/scene.splinecode');
+  // }, []);
 
   // text effect
   useEffect(() => {
@@ -77,8 +87,17 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.bg} ref={vantaRef}>
-      </div>
+      {/* <div className={styles.bg} ref={vantaRef} /> */}
+      {/* <canvas
+        className={styles.canvas3d}
+        id="canvas3d"
+      /> */}
+      <Spline
+        scene="https://prod.spline.design/v9A-GdS69dqDaCXi/scene.splinecode"
+        className={styles.canvas3d}
+      />
+
+
       <div className={styles.topSection}>
         {/* <video className={styles.videoInside} autoPlay muted loop controls=''>
           <source src={trlogo} type="video/webm" />

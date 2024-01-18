@@ -15,6 +15,9 @@
   overflow: hidden;
 }
 
+.canvas3d {
+  position: absolute;
+}
 
 .bg {
   height: 100vh;
@@ -32,6 +35,27 @@
 .mainVideo {
   height: 200px;
   width: 200px;
+}
+
+@media screen and (max-width: 499px) {
+  .enterImage .mainVideo {
+    display: none;
+  }
+
+  .enterImage img {
+    display: block;
+  }
+}
+
+/* Hide image on larger screens and show video */
+@media screen and (min-width: 500px) {
+  .enterImage .mainVideo {
+    display: block;
+  }
+
+  .enterImage img {
+    display: none;
+  }
 }
 
 .videoInside {
@@ -73,33 +97,26 @@
 }
 
 .topText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
-  padding: 20px;
-  max-width: 1500px;
+  padding: 15px;
+  max-width: 1200px;
+  margin-top: 30rem;
   z-index: 1;
 }
 
 .titleText {
-  /* font-size: clamp(1.5rem, 0.6486rem + 4.5405vw, 12rem); */
-  font-size: clamp(3rem, 2.4324rem + 3.027vw, 10rem);
-  color: #e4e4e4;
+  font-size: clamp(1.8rem, 1.5405rem + 1.3838vw, 5rem);
+  color: #ccd9ef;
   font-weight: 100;
   user-select: none;
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
-  /* font-family: 'FrontFont', sans-serif; */
-  /* font-family: 'Lined', sans-serif; */
 }
 
 .titleSpans {
   display: inline-block;
   margin-bottom: 30px;
   line-height: 95%;
-
 }
 
 
