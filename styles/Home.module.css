@@ -43,6 +43,7 @@
   }
 
   .enterImage img {
+    margin-top: -4rem;
     display: block;
   }
 }
@@ -100,7 +101,7 @@
   text-align: center;
   padding: 15px;
   max-width: 1200px;
-  margin-top: 30rem;
+  margin-top: 23rem;
   z-index: 1;
 }
 
