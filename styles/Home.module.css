@@ -108,7 +108,7 @@
 
 .titleText {
   font-size: clamp(1.8rem, 1.5405rem + 1.3838vw, 5rem);
-  color: #ccd9ef;
+  color: #bec8cf;
   font-weight: 100;
   user-select: none;
   font-family: 'Exo 2', sans-serif;
