@@ -86,7 +86,8 @@ function MyApp({ Component, pageProps }) {
               </video>
 
               <img
-                src='./tr4_2_small.png'
+                // src='./tr4_2_small.png'
+                src='./tranim2.gif'
                 onClick={clickEnterWithSound}
                 width={250}
                 alt='TR Logo'
