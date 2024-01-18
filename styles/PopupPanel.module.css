@@ -48,10 +48,19 @@
 }
 
 .logoCardImage {
-    display: flex;
-    justify-content: flex-end;
-    max-width: 150px;
-    margin: 3rem 0 5rem 0;
+    max-width: 165px;
+    margin: 3rem 0 8rem 0;
+}
+
+.logoCardImage img {
+    width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+    .logoCardImage {
+        margin: 5rem 0 3rem 0;
+    }
+
 }
 
 .closeButton {
