@@ -108,6 +108,7 @@
 
 .titleText {
   font-size: clamp(1.8rem, 1.5405rem + 1.3838vw, 5rem);
+  text-shadow: -1px 1px 8px rgba(47, 59, 96, 1);
   color: #bec8cf;
   font-weight: 100;
   user-select: none;
