@@ -92,7 +92,7 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 2rem;
   height: 100vh;
   background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 0) 35%, rgba(0, 212, 255, 0) 100%);
@@ -100,9 +100,9 @@
 
 .topText {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   max-width: 1200px;
-  margin-top: 23rem;
+  margin-bottom: 200px;
   z-index: 1;
 }
 
